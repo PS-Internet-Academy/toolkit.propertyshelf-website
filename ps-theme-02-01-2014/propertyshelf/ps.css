@@ -288,6 +288,7 @@ ul#country-chooser-list a.country-usa{
     display: table-cell;
     height: 120px;
     vertical-align: middle;
+    width:20%;
 }
 #featurenavi li {
     text-align: center;
@@ -383,22 +384,43 @@ dl.portlet ul.navTree .navTreeCurrentItem {
     border: 2px solid #6a8598;
 }
 /*-----------------------------------colophon---------------------------------------*/
+#portal-colophon p,#portal-colophon h2{
+    font-family: 'Istok Web', sans-serif;  
+    text-shadow: none;
+    color:#ffffff;
+}
+#portal-colophon h2{
+    font-weight: normal;   
+    font-size:18px;
+    letter-spacing: 0.3px;
+    padding-top: 10px;
+}
 #portal-colophon p {
     margin: 0;
-    padding: 30px 1% 40px;
-    color:#ffffff;
-    font-family: 'Istok Web', sans-serif;
-    font-size:12px;
-    text-shadow: none;
+    font-size:16px;
+    padding-bottom: 14px;
+    padding-top: 5px;
+}
+#portal-colophon p:last-of-type{
+    padding-top: 14px;
+    padding-bottom: 40px;
+}
+#portal-colophon p small {
+    font-size:13px;
+}
+#portal-colophon img{   
+    margin:0 1%;   
 }
 .colophonWrapper{
     min-height: 110px;
-    margin: 0 auto;
-    
+    margin: 0 auto;    
 }
+
 #portal-colophon{   
-    background:#597992;   
+    background:#597992;  
+    overflow:auto;
 }
+
 /*-----------------------------------doormat---------------------------------------*/
 .footer{
     background:none;   
@@ -577,7 +599,6 @@ background: none white;
 }
 .leftbody .image-inline{
     border: 1px solid #b7b7b7;
-    height: 250px;
     padding: 2%;
     width: 95%;   
 }
@@ -942,6 +963,16 @@ dl.portletNews p{
 div.listingBar a {
     padding:0 5px !important;   
 }
+.price {
+    padding: 10px 3px!important;
+    background-color: #597a94 !important;
+}
+.listing #listing-info dl.workflow {
+    border-bottom: 1px dotted #5D5D5D;
+    margin-bottom: 2%;
+    padding-bottom: 5%;
+    padding-top: 10px;
+}
 /*----------------------------------/search property--------------------------*/
 /*----------------------------------lasted listing-----------------------------*/
 #recent-listings h2.tileHeadline a{
@@ -1083,6 +1114,7 @@ input[type="submit"] {
     -ms-transition: 0.1s linear all;
     -o-transition: 0.1s linear all;
     transition: 0.1s linear all;
+    margin-top: 1em;
 }
 /*----------------------------------/listing search--------------------------*/
 /*----------------------------------portlets---------------------------------*/
@@ -1097,12 +1129,16 @@ dl.portlet dt.portletHeader {
     background-color:#6a8598;
     color:#fff;
     font-weight:normal;
+    margin:0;
 }
 .portletItem {
     background: #e6e6e6;
 }
 /*----------------------------------/portlets---------------------------------*/
 /*---------------------------------- Quick search portlets---------------------*/
+input[type="submit"]{
+    margin-top:2em;   
+}
 #portal-column-two  #formfield-form-widgets-listing_type{
     overflow:auto;   
 }
@@ -1111,6 +1147,7 @@ dl.portlet dt.portletHeader {
 }
 #portal-column-two #form-widgets-beds-min {
     width: 37%;
+    float:left;
 }
 #portal-column-two .separator{
     display:none;   
@@ -1118,26 +1155,23 @@ dl.portlet dt.portletHeader {
 #portal-column-two #formfield-form-widgets-baths{
     width:100%;
 }
-
 #portal-column-two #form-widgets-baths-min {
     width: 37%;
-}
-#portal-column-two .collapse .option {
-       
+    float:left;
 }
 #portal-column-two .form-row-price {
     width: 100%;
 }
 #portal-column-two #formfield-form-widgets-price_min {
-    width: 35%;
+    width: 37%;
     float: left;
     clear: none;
 }
 #portal-column-two #form-widgets-price_min {
-    width: 100%;
+    width: 93%;
 }
 #portal-column-two #form-widgets-price_max {
-    width: 100%;
+    width: 93%;
 }
 #portal-column-two #formfield-form-widgets-lot_size {
     width: 100%;
@@ -1208,10 +1242,15 @@ dl.portlet dt.portletHeader {
     height: 27px;
 }
 /*----------------------------------- agent portlets---------------------------*/
-
 .agent_avatar {
     float: left;
     width: 40%;
+}
+.template-listing-detail #portal-column-content #listing-info .price dt,
+.template-listing-detail #portal-column-content #listing-info .price dd{
+    font-size: 12px;
+    color: #fff;
+    font-weight: normal;
 }
 .portletAgentInformation .portletItem .contact_details dt, .portletAgentInformation .portletItem .contact_details dd {
     width: 45%;
@@ -1240,6 +1279,7 @@ dl.contact_details dt, dl.contact_details dd {
     width: 50%;
     float: left;
     margin-left: 15px;
+    display:none;
 }
 /*----------------------------------- listing details-------------------------*/
 .template-listing-detail #portal-column-content #content{
@@ -1265,6 +1305,19 @@ dl.contact_details dt, dl.contact_details dd {
     box-shadow: 0 0 3em 0.5em #666;
     -moz-box-shadow: 0 0 3em 0.5em #666;
     -webkit-box-shadow: 0 0 3em #666;
+}
+/*-----------------------------------sociallike-------------------------*/
+.sociallike-network-pinterest {
+    width: 7%;
+    float: left;
+}
+.sociallike-network-linkedin {
+    width: 10%;
+    float: left;
+}
+.sociallike-network-gplus {
+    width: 9%;
+    float: left;
 }
 /*----------------------------------- search mask-------------------------*/
 .frontpage-search-wrapper{
@@ -1394,6 +1447,11 @@ dl.contact_details dt, dl.contact_details dd {
 	clear:none;
 	margin-bottom: 0;
 }
+/*-----------------------------------listing-search---------------------------------------*/
+#listing-search #formfield-form-widgets-listing_type .horizontal,
+.portletQuickSearch #formfield-form-widgets-listing_type .horizontal{
+    display:none;   
+}
 /*-----------------------------------ie9---------------------------------------*/
 .ie9 #fullbgnav{
     background-color:#dededb;
@@ -1463,9 +1521,6 @@ dl.contact_details dt, dl.contact_details dd {
     .portaltype-collective-cover-content #portal-column-content div.position-12 {
         margin-left: -16.5%;
     }
-    .rightbody img.image-inline{
-        height: 93px;
-    }
     div#portal-column-two.width-1\:4{
         margin-top:3%;   
     }
@@ -1517,35 +1572,39 @@ dl.contact_details dt, dl.contact_details dd {
     }
     #portal-column-two #form-widgets-lot_size-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
-        margin-left: 15%;
         height: 25px;
     }
     #portal-column-two #form-widgets-interior_area-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
         height: 25px;
-        margin-left: 15%;
     }
     .portletItem .field input[type="text"] {
-        width: 96% !important;
+        width: 93% !important;
+    }
+    .portletQuickSearch .portletItem .field input[type="text"] {
+        width: 93% !important;
     }
     .portletQuickSearch #formfield-form-widgets-price_max {
-        width: 35% !important; 
-        margin-left: 9%;
+        width: 37% !important; 
+        float:right;
     }
     #portal-column-two #form-widgets-beds-max {
         width: 37%;
-        margin-left: 25px;
+        float:right;
     }
     #portal-column-two #form-widgets-baths-max {
         width: 37%;
-        margin-left: 25px;
+        float:right;
     }
     .form-row-listing-type .field span.option {
-        width: 70%;
+        width: 50%;
+    }
+    .portletQuickSearch #formfield-form-widgets-location_city #form-widgets-location_city{
+        width:97% !important   
     }
     #portal-column-two .portletWrapper{
         padding: 0 10%;   
@@ -1589,9 +1648,6 @@ dl.contact_details dt, dl.contact_details dd {
     }
     .blue-box, .orange-box, .green-box, .purple-box, .yellow-box{
         width:100%;   
-    }
-    .rightbody img.image-inline{
-        height: 93px;
     }
     .template-view .move-head select{
         width:70%;
@@ -1640,35 +1696,33 @@ dl.contact_details dt, dl.contact_details dd {
     }
     #portal-column-two #form-widgets-lot_size-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
-        margin-left: 15%;
         height: 25px;
     }
     #portal-column-two #form-widgets-interior_area-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
         height: 25px;
-        margin-left: 15%;
     }
     #portal-column-two #formfield-form-widgets-price_max {
-        width: 35% !important;
-        margin-right: 13%;
+        width: 37% !important;
+        float:right;
     }
     #portal-column-two #form-widgets-beds-max {
         width: 37%!important;
-        margin-right: 13%;
+        float:right;
     }
     #portal-column-two #form-widgets-baths-max {
         width: 37%!important;
-        margin-left: 11%;
+        float:right;
     }
     #portal-column-two #form-widgets-location_city {
         width: 98%;
     }
     .form-row-listing-type .field span.option {
-        width: 70%;
+        width: 50%;
     }
     #portal-column-two{
         padding-top:35px;   
@@ -1694,8 +1748,12 @@ dl.contact_details dt, dl.contact_details dd {
     #header-chooser{
         width:750px;   
     }
-    .colophonWrapper,.carousel-pager,#header .row, .footer .row,#portal-columns,.icons-on .row,#featurenavi{
+    .carousel-pager,#header .row, .footer .row,#portal-columns,.icons-on .row,#featurenavi{
         width: 100%;
+    }
+    .colophonWrapper{
+        width:98%;
+        padding: 0 1%;
     }
     .portaltype-collective-cover-content #portal-column-content div.position-0 {
         margin-left: -100%;
@@ -1714,9 +1772,6 @@ dl.contact_details dt, dl.contact_details dd {
     }
     .blue-box, .orange-box, .green-box, .purple-box, .yellow-box{
         width:100%;   
-    }
-    .rightbody img.image-inline{
-        height: 80px;
     }
     .template-view .move-head select{
         width:70%;
@@ -1752,40 +1807,47 @@ dl.contact_details dt, dl.contact_details dd {
         clear: none;
     }
     #portal-column-two #formfield-form-widgets-object_type .collapse .option {
-        width: 50% !important; 
+        width: 25% !important; 
         float: left;
         clear: none;
     }
     #portal-column-two #form-widgets-lot_size-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
-        margin-left: 15%;
         height: 25px;
     }
     #portal-column-two #form-widgets-interior_area-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
         height: 25px;
         margin-left: 15%;
     }
     #portal-column-two #form-widgets-beds-max {
         width: 37%;
-        margin-right: 13%;
+        float:right;
+        margin-left: 15%;
     }
     #portal-column-two #form-widgets-baths-max {
         width: 37%;
-        margin-right: 13%;
+        margin-left: 15%;
+        float:right;
+    }
+    .portletQuickSearch #formfield-form-widgets-price_min,
+    .portletQuickSearch #formfield-form-widgets-price_max{
+        float:right;
+        width:37%;
     }
     #portal-column-two #form-widgets-price_max {
-        width: 75%;
+        float: left;
+        width: 97%;
     }
     #portal-column-two #form-widgets-location_city {
         width: 98%;
     }
     .form-row-listing-type .field span.option {
-        width: 50%;
+        width: 20%;
     }
     #portal-column-two .portletWrapper{
         padding: 0;   
@@ -1805,6 +1867,9 @@ dl.contact_details dt, dl.contact_details dd {
     }
     #portal-logo{
         margin-left:2%;   
+    }  
+    #portal-colophon img{
+        margin: 0.8%;
     }
 }
 @media (min-width: 600px) and (max-width: 767px){
@@ -1817,8 +1882,17 @@ dl.contact_details dt, dl.contact_details dd {
     #header-chooser{
         width:550px;   
     }
-    .icons-on .row,#header .row,.colophonWrapper,.carousel-pager,#header .row,.footer .row,#portal-columns,#featurenavi{
+    .icons-on .row,#header .row,.carousel-pager,#header .row,.footer .row,#portal-columns,#featurenavi{
         width: 100%;
+    }
+    .colophonWrapper{
+        width:98%;
+        padding:0 1%;
+    }
+    #portal-column-two #formfield-form-widgets-object_type .collapse .option {
+        width: 30% !important; 
+        float: left;
+        clear: none;
     }
     #ps-slider {
         margin-top: 68px;
@@ -1868,9 +1942,6 @@ dl.contact_details dt, dl.contact_details dd {
     .blue-box, .orange-box, .green-box, .purple-box, .yellow-box{
         width:100%;   
     }
-    .rightbody img.image-inline{
-        height: 93px;
-    }
     .template-view .move-head select{
         width:70%;
     }
@@ -1911,28 +1982,31 @@ dl.contact_details dt, dl.contact_details dd {
     }
     #portal-column-two #form-widgets-lot_size-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
-        margin-left: 15%;
         height: 25px;
     }
     #portal-column-two #form-widgets-interior_area-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
         height: 25px;
-        margin-left: 15%;
+    }
+    .portletQuickSearch #formfield-form-widgets-price_min,
+    .portletQuickSearch #formfield-form-widgets-price_max {
+        float: right;
+        width: 37%;
     }
     #portal-column-two #form-widgets-price_max {
-        width: 75%;
+        width: 97%;
     }
     #portal-column-two #form-widgets-baths-max {
         width: 37%;
-        margin-right:13%;
+        float:right;
     }
     #portal-column-two #form-widgets-beds-max {
         width: 37%;
-        margin-right: 13%;
+        float:right;
     }
     #portal-column-two #form-widgets-location_city {
         width: 98%;
@@ -1960,6 +2034,12 @@ dl.contact_details dt, dl.contact_details dd {
     #portal-logo{
         margin-left:2%;   
     }
+    #portal-colophon img {
+        margin:0 0 0 6%;
+    }
+    #portal-colophon img:first-of-type {
+        margin:0;
+    }
 }
 @media (min-width: 481px) and (max-width: 599px){
     #doormat-container.columns-6 .doormatColumn{
@@ -1975,8 +2055,12 @@ dl.contact_details dt, dl.contact_details dd {
     #ps-slider {
         margin-top: 48px;
     }
-    .colophonWrapper,.carousel-pager,#header .row, .footer .row,#portal-columns,.icons-on .row,#featurenavi{
+    .carousel-pager,#header .row, .footer .row,#portal-columns,.icons-on .row,#featurenavi{
         width: 100%;
+    }
+    .colophonWrapper{
+        width:98%;
+        padding:0 1%;
     }
     #header-chooser{
         width:460px;   
@@ -2019,9 +2103,6 @@ dl.contact_details dt, dl.contact_details dd {
     }
     .blue-box, .orange-box, .green-box, .purple-box, .yellow-box{
         width:100%;   
-    }
-    .rightbody img.image-inline{
-        height: 93px;
     }
     .template-view .move-head select{
         width:70%;
@@ -2072,37 +2153,39 @@ dl.contact_details dt, dl.contact_details dd {
         display: none;
     }
     #portal-column-two #formfield-form-widgets-object_type .collapse .option {
-        width: 90% !important; 
+        width: 50% !important; 
         float: left;
         clear: none;
     }
     #portal-column-two #form-widgets-price_max {
-        width: 75%;
+        width: 97%;
     }
     #portal-column-two #form-widgets-beds-max {
-        width: 35%;
-        margin-right: 13%;
+        width: 37%;
+        float:right;
     }
     #portal-column-two #form-widgets-baths-max {
-        width: 35%;
-        margin-right: 13%;
+        width: 37%;
+        float:right;
     }
     #portal-column-two #form-widgets-location_city {
         width: 98%;
     }
     #portal-column-two #form-widgets-lot_size-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
-        margin-left: 15%;
         height: 25px;
     }
     #portal-column-two #form-widgets-interior_area-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
-        margin-left: 15%;
         height: 25px;
+    }
+    .portletQuickSearch #formfield-form-widgets-price_min, .portletQuickSearch #formfield-form-widgets-price_max {
+        float: right;
+        width: 37%;
     }
     .form-row-listing-type .field span.option {
         width: 50%;
@@ -2130,6 +2213,12 @@ dl.contact_details dt, dl.contact_details dd {
     #featurenavi {
         margin-top: 88px;
     }
+    #portal-colophon img {
+        margin:0 0 0 5%;
+    }
+    #portal-colophon img:first-of-type {
+        margin:0;
+    }
 }
 @media (max-width: 480px){
     #doormat-container.columns-6 .doormatColumn{
@@ -2142,8 +2231,12 @@ dl.contact_details dt, dl.contact_details dd {
         width:100%;
         right:0;
     }
-    .colophonWrapper,.carousel-pager,#header .row, .footer .row,#portal-columns,.icons-on .row,#featurenavi{
+    .carousel-pager,#header .row, .footer .row,#portal-columns,.icons-on .row,#featurenavi{
         width: 100%;
+    }
+    .colophonWrapper{
+        width:98%;
+        padding:0 1%;
     }
     #ps-slider {
         margin-top: 48px;
@@ -2186,9 +2279,6 @@ dl.contact_details dt, dl.contact_details dd {
     }
     .blue-box, .orange-box, .green-box, .purple-box, .yellow-box{
         width:100%;   
-    }
-    .rightbody img.image-inline{
-        height: 93px;
     }
     .template-view .move-head select{
         width:70%;
@@ -2235,35 +2325,37 @@ dl.contact_details dt, dl.contact_details dd {
         display: none;
     }
     #portal-column-two #form-widgets-price_max {
-        width: 75%;
+        width: 97%;
     }
     #portal-column-two #form-widgets-beds-max {
-        width: 35% !important;
-        margin-right: 13%;
+        width: 37% !important;
+        float:right;;
     }
     #portal-column-two #form-widgets-baths-max {
-        width: 35% !important;
-        margin-right: 13%;
+        width: 37% !important;
+        float:right;
     }
     #portal-column-two #form-widgets-location_city {
         width: 98%;
     }
     #portal-column-two #form-widgets-lot_size-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
-        margin-left: 15%;
         height: 25px;
+    }
+    .portletQuickSearch #formfield-form-widgets-price_min, .portletQuickSearch #formfield-form-widgets-price_max {
+        float: right;
+        width: 37%;
     }
     #portal-column-two #form-widgets-interior_area-max {
         width: 37%;
-        float: left;
+        float: right;
         clear: none;
-        margin-left: 15%;
         height: 25px;
     }
     #portal-column-two #formfield-form-widgets-object_type .collapse .option {
-        width: 80% !important; 
+        width: 50% !important; 
         float: left;
         clear: none;
     }
@@ -2308,5 +2400,11 @@ dl.contact_details dt, dl.contact_details dd {
     }
     #featurenavi {
         margin-top: 88px;
+    }
+    #portal-colophon img {
+        margin:0 0 0 5%;
+    }
+    #portal-colophon img:first-of-type {
+        margin:0;
     }
 }

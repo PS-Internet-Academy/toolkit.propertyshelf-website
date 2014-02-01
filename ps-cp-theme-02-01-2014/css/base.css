@@ -300,7 +300,6 @@ ul#portal-languageselector li.currentLanguage{
 #portal-globalnav li{
     display: inline-block;
     float: left;
-    max-width: 100px;
     padding: 4px 0;
 }
 #portal-globalnav li:last-of-type{
